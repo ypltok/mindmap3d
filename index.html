@@ -82,8 +82,9 @@ input,textarea{-webkit-user-select:text;user-select:text}
 .bar > *{pointer-events:auto}
 .brand{display:flex;align-items:center;gap:8px;min-width:0;flex:1 1 auto;margin-right:auto;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:4px 6px 4px 10px;box-shadow:var(--shadow);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);max-width:420px}
 .brand svg{flex:none;color:var(--accent)}
-#mapsBtn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border:0;border-radius:9px;background:transparent;color:var(--accent);cursor:pointer}
-#mapsBtn:hover{background:var(--accent-soft)}
+#mapsBtn{flex:none;display:inline-flex;align-items:center;justify-content:center;gap:4px;height:34px;padding:0 10px 0 7px;border:0;border-radius:9px;background:var(--accent-soft);color:var(--accent);font:700 13px var(--font-ui);white-space:nowrap;cursor:pointer}
+#mapsBtn svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#mapsBtn:hover{background:var(--accent);color:var(--accent-fg)}
 #mapsBtn:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
 .sync{flex:none;display:inline-flex;align-items:center;gap:6px;font:500 12px var(--font-ui);color:var(--muted);padding:0 6px;white-space:nowrap}
 .sync i{width:8px;height:8px;border-radius:50%;background:var(--muted)}
@@ -232,7 +233,7 @@ input,textarea{-webkit-user-select:text;user-select:text}
 
   <header class="bar">
     <div class="brand">
-      <button id="mapsBtn" title="マップ一覧" aria-label="マップ一覧"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="3.2" fill="currentColor"/><circle cx="4.5" cy="6" r="2"/><circle cx="19.5" cy="7" r="2"/><circle cx="16" cy="20" r="2"/><path d="M9.4 10.2L6.2 7.3M14.8 10.6l3.1-2.3M13.2 15l1.9 3.1"/></svg></button>
+      <button id="mapsBtn" title="トップページに戻る" aria-label="トップページに戻る"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M6 9.5V20h4.5v-5.5h3V20H18V9.5"/></svg>ホーム</button>
       <input id="title" aria-label="マップの名前" maxlength="60">
       <span class="sync" id="sync" title="保存の状態"><i></i><span id="syncTx">この端末</span></span>
     </div>
@@ -253,7 +254,7 @@ input,textarea{-webkit-user-select:text;user-select:text}
     <button id="mOpen" role="menuitem"><svg viewBox="0 0 24 24"><path d="M4 6.5V18a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1h-7l-2-2.5H5a1 1 0 0 0-1 1z"/></svg>ファイルを開く（.md など）</button>
     <button id="mImport" role="menuitem"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 13v6h14v-6"/></svg>貼り付け（テキスト・Markdown）</button>
     <hr>
-    <button id="mMaps" role="menuitem"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>マップ一覧</button>
+    <button id="mMaps" role="menuitem"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>トップページに戻る</button>
     <button id="mNew" role="menuitem"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>新しいマップ</button>
     <button id="mSample" role="menuitem"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h13"/></svg>サンプルを開く</button>
     <hr>

@@ -1,5 +1,5 @@
 // Offline support: the app's own files are kept on the device; fonts are cached as they load.
-const CACHE = 'mm3d-v1';
+const CACHE = 'mm3d-v2';
 const SHELL = ['./', 'index.html', 'three.min.js', 'OrbitControls.js', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => {
